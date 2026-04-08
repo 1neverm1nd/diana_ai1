@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вместе - AI поддержка</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-layer"></div>
+
+  <header class="container hero">
+    <div>
+      <h1>Вместе</h1>
+      <p class="subtitle">
+        Учебный AI-прототип первичной психологической поддержки и маршрутизации к помощи
+      </p>
+    </div>
+    <div class="hero-controls">
+      <button id="quickExitBtn" class="danger-btn">Быстро закрыть</button>
+      <label class="toggle">
+        <input id="autoclearToggle" type="checkbox" />
+        <span>Автоочистка истории через 30 сек</span>
+      </label>
+    </div>
+  </header>
+
+  <main class="container layout">
+    <section class="panel">
+      <h2>О проекте</h2>
+      <p>
+        Приложение помогает сделать первые безопасные шаги в кризисной ситуации:
+        оценка риска, стабилизация состояния, контакты экстренной помощи и личный план на 24 часа.
+      </p>
+      <div class="tags">
+        <span>Анонимно</span>
+        <span>Мягкий тон</span>
+        <span>Приоритет безопасности</span>
+        <span>Казахстан: 102 / 103</span>
+      </div>
+      <ul class="compact-list">
+        <li>ЦА: 16+ (включая пользователей в остром кризисе).</li>
+        <li>Технологии: HTML, CSS, JavaScript, Node.js API-прокси.</li>
+        <li>Принцип: поддержка + структурированный сценарий помощи.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Быстрый режим "кто-то рядом"</h2>
+      <p>Если небезопасно печатать, нажмите кнопку и бот будет отвечать коротко.</p>
+      <button id="stealthBtn" class="secondary-btn">Режим коротких ответов: выкл</button>
+      <div class="emergency-row">
+        <button id="call102" class="chip">102</button>
+        <button id="call103" class="chip">103</button>
+      </div>
+      <p class="hint">
+        Если есть непосредственная угроза жизни, приоритет: экстренные службы и безопасное место.
+      </p>
+    </section>
+
+    <section class="panel span-2">
+      <h2>Диалог поддержки <span id="aiStatus" class="status-pill">AI: offline</span></h2>
+      <div id="chatBox" class="chat-box" aria-live="polite"></div>
+      <div id="optionsBox" class="options-box"></div>
+      <div class="chat-controls">
+        <input id="userInput" type="text" placeholder="Напишите, что сейчас самое трудное..." />
+        <button id="sendBtn">Отправить</button>
+      </div>
+    </section>
+
+    <section class="panel span-2">
+      <h2>План на 24 часа</h2>
+      <div id="planBox" class="plan-box">
+        <p>План будет сформирован по результатам диалога.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>
+      Важно: это учебный прототип, не медицинский сервис. Он не ставит диагноз и не заменяет специалиста.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

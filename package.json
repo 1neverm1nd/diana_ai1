@@ -1,0 +1,19 @@
+{
+  "name": "diana_ai",
+  "version": "1.0.0",
+  "description": "Учебный веб-проект по теме \"Искусственный интеллект в психологии\" (вариант №3 - полноценное приложение/вебсайт).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/genai": "^1.48.0",
+    "dotenv": "^17.4.1",
+    "express": "^5.2.1"
+  }
+}
